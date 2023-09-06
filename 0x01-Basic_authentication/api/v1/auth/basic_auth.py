@@ -23,8 +23,8 @@ class BasicAuth(Auth):
                 return field_match.group('token')
         return None
 
-	def decode_base64_authorization_header(self, base64_authorization_header: str) -> str:
-		"""Decode the Base64 string and return it as a UTF-8 string"""
+    def decode_base64_authorization_header(self, base64_authorization_header: str) -> str:
+        """Decode the Base64 string and return it as a UTF-8 string"""
         if base64_authorization_header is None or not isinstance(base64_authorization_header, str):
             return None
 
