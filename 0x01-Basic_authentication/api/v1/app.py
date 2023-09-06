@@ -24,7 +24,7 @@ if auth_type == 'auth':
 if auth_type == 'basic_auth':
     auth = BasicAuth()
 
-@before_request
+@app.before_request
 def add_method():
     """Filtering each request"""
     if auth is None:

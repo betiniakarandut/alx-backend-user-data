@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Authentication module"""
+from typing import List, TypeVar
 from flask import request
 from api.v1.views import app_views
 
@@ -12,7 +13,7 @@ class Auth:
             return True
         if path[-1] != '/':
             path += '/'
-        if path is in excluded_paths:
+        if path in excluded_paths:
             return False
 
         return True
