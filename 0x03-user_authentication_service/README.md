@@ -1,8 +1,11 @@
 <p><h1>0x03. User authentication service :fire:</h1></p>
 
 <p><h1>Description</h1></p>
+
 In this project I began to learn/use User Authentication service<br>
-In the industry, you should not implement your own authentication system and use a module or framework that doing it for you (like in Python-Flask: [Flask-User](https://www.flask-user.readthedocs.io/en/latest)). Here, for the learning purpose, we will walk through each step of this mechanism to understand it by doing.
+In the industry, you should not implement your own authentication system and use a module or framework that doing it for you
+(like in Python-Flask: [Flask-User](https://flask-user.readthedocs.io/en/latest)).<br>
+Here, for the learning purpose, we will walk through each step of this mechanism to understand it by doing.
 
 ## Learning Objectives
 
@@ -96,8 +99,8 @@ class DB:
 ```
 
 <br>
-Note that DB._session is a private property and hence should NEVER be used from outside the DB class.
-Implement the add_user method, which has two required string arguments: email and hashed_password, and returns a User object.<br>
+Note that `DB._session` is a private property and hence should `NEVER` be used from outside the `DB` class.
+Implement the add_user method, which has two required string arguments: `email` and `hashed_password`, and returns a `User` object.<br>
 The method should save the user to the database. No validations are required at this stage.<br>
 
 ```
@@ -128,9 +131,9 @@ bob@dylan:~$
 
 ## [2. Find user](./db.py) <br>
 
-In this task you will implement the DB.find_user_by method. This method takes in arbitrary keyword arguments and returns the first row found in the users table as filtered by the method’s input arguments. No validation of input arguments required at this point.
+In this task you will implement the `DB.find_user_by` method. This method takes in arbitrary keyword arguments and returns the first row found in the users table as filtered by the method’s input arguments. No validation of input arguments required at this point.
 <br>
-Make sure that SQLAlchemy’s `NoResultFound` and `InvalidRequestError` are raised when no results are found, or when wrong query arguments are passed, respectively.
+Make sure that `SQLAlchemy’s` `NoResultFound` and `InvalidRequestError` are raised when no results are found, or when wrong query arguments are passed, respectively.
 <br>
 Warning:
 <br>
@@ -181,8 +184,8 @@ bob@dylan:~$
 
 ## [3. update user](./db.py) <br>
 
-In this task, you will implement the `DB.update_user` method that takes as argument a required user_id integer and arbitrary keyword arguments, and returns None. <br>
-The method will use find_user_by to locate the user to update, then will update the user’s attributes as passed in the method’s arguments then commit changes to the database.
+In this task, you will implement the `DB.update_user` method that takes as argument a required `user_id` `integer` and arbitrary keyword arguments, and returns None. <br>
+The method will use `find_user_by` to locate the user to update, then will update the user’s attributes as passed in the method’s arguments then commit changes to the database.
 <br>
 If an argument that does not correspond to a user attribute is passed, raise a `ValueError`.
 
@@ -749,3 +752,9 @@ if __name__ == "__main__":
 ```
 
 Run `python` `main.py`. If everything is correct, you should see no output.
+
+#
+
+## Author
+
+[Betini Akarandut :fire:](https://github.com/betiniakarandut)
