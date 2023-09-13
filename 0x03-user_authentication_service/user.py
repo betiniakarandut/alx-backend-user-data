@@ -29,7 +29,6 @@ class User(Base):
         self.session_id = session_id
         self.reset_token = reset_token
 
-
     def __repr__():
         """Prints official representation of users class"""
         return"<User(email='%s'," +\
