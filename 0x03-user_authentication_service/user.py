@@ -18,10 +18,17 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, Sequence('users_id_seq'), primary_key=True)
-    email = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False, unique=True)
     hashed_password = Column(String(250), nullable=False)
     session_id = Column(String(250))
     reset_token = Column(String(250))
+
+    def __init__(self, email, hashed_password, session_id, reset_token):
+        self.email = email
+        self.hashed_password = hashed_password
+        self.session_id = session_id
+        self.reset_token = reset_token
+
 
 #    def __repr__():
 #        """Prints official representation of users class"""
