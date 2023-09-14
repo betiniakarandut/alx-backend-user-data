@@ -6,8 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
 
-from user import Base
-from user import User
+from user import Base, User
 from sqlalchemy import Column, Integer, String
 
 
@@ -38,5 +37,3 @@ class DB:
         self._session.add(user)
         self._session.commit()
         return user
-
-             
